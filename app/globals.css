@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply overflow-x-clip bg-paper text-ink antialiased; }
+  ::selection { @apply bg-matcha-400 text-butter; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-forest; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+@layer components {
+  .field {
+    @apply w-full rounded-xl border border-matcha-600/25 bg-white/70 px-4 py-3 outline-none transition focus:border-matcha-600 focus:ring-2 focus:ring-matcha-400/30;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-7 py-3 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary { @apply btn bg-forest text-butter hover:bg-matcha-800; }
+  .btn-outline { @apply btn border border-forest/30 text-forest hover:bg-butter; }
+  .mini-btn {
+    @apply rounded-full border border-matcha-600/25 px-4 py-1.5 text-xs text-matcha-800 transition hover:bg-butter disabled:opacity-40;
+  }
+  .mini-btn-danger { @apply mini-btn border-red-700/40 text-red-800 hover:bg-red-50; }
+  .eyebrow { @apply text-xs font-medium uppercase tracking-[0.28em] text-matcha-600; }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
