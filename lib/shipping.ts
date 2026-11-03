@@ -1,13 +1,22 @@
 const ZONES = [
   { fee: 75, areas: ['Cairo', 'Giza'] },
-  { fee: 85, areas: ['Beheira', 'Kafr El Sheikh', 'Dakahlia', 'Qalyubia', 'Damietta', 'Monufia', 'Sharqia', 'Gharbia'] },
-  { fee: 90, areas: ['Ismailia', 'Suez', 'Port Said'] },
-  { fee: 105, areas: ['Qena', 'Luxor', 'Aswan'] },
-  { fee: 150, areas: ['New Valley', 'Red Sea', 'North Coast', 'Matrouh'] },
-  { fee: 200, areas: ['South Sinai', 'North Sinai'] },
-  
-  { fee: 85, areas: ['Alexandria','Fayoum', 'Beni Suef','Minya','Assiut', 'Sohag'] },
-  
+  { fee: 80, areas: ['Giza Suburbs', 'Cairo Outskirts'] },
+  { 
+    fee: 100, 
+    areas: [
+      'Beheira', 'Kafr El Sheikh', 'Dakahlia', 'Qalyubia', 
+      'Damietta', 'Monufia', 'Sharqia', 'Gharbia', 
+      'Ismailia', 'Suez', 'Port Said'
+    ] 
+  },
+  { 
+    fee: 120, 
+    areas: [
+      'Fayoum', 'Beni Suef', 'Minya', 'Assiut', 
+      'Sohag', 'Qena', 'Luxor', 'Aswan'
+    ] 
+  },
+  { fee: 150, areas: ['Matrouh', 'New Valley', 'Red Sea', 'Sharm El Sheikh'] }
 ];
 
 export const SHIPPING_FEES: Record<string, number> = Object.fromEntries(
